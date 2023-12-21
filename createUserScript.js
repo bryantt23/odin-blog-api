@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+const saltRounds = 10; // Number of salt rounds for hashing
 
 // Replace with your connection string, username, and password
 const connectionString = 'your_mongodb_connection_string';
@@ -26,9 +28,12 @@ mongoose.connection.on('error', error => {
 });
 
 // Function to create a user
-const createUser = async (username, password) => {
+const createUser = async (username, plainTextPassword) => {
   try {
-    const newUser = new User({ username, password });
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(plainTextPassword, saltRounds);
+
+    const newUser = new User({ username, password: hashedPassword });
     await newUser.save();
     console.log('User created:', newUser);
   } catch (error) {
@@ -39,7 +44,7 @@ const createUser = async (username, password) => {
 };
 
 // Replace with the username and password you want to create
-const username = 'your_username';
-const password = 'your_password';
+const username = 'bryantt23';
+const password = '123123';
 
 createUser(username, password);
