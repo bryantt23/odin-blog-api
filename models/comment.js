@@ -13,6 +13,4 @@ const commentSchema = new Schema({
   // You can add other fields like timestamp here
 });
 
-// Optional: You can then export this schema or use it to define a Comment model
-const Comment = mongoose.model('Comment', commentSchema);
-module.exports = Comment;
+module.exports = commentSchema;
