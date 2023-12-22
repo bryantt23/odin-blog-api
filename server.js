@@ -107,6 +107,27 @@ app.get('/post/:id', async (req, res) => {
   }
 });
 
+app.post('/post/:id/comment', async (req, res) => {
+  const postId = req.params.id;
+  const { body, author } = req.body;
+
+  try {
+    const post = await Post.findById(postId);
+    if (!post) {
+      return res.status(404).send('Post not found');
+    }
+
+    // Create a new comment
+    const newComment = { body, author };
+    post.comments.push(newComment);
+
+    await post.save();
+    res.status(201).json(newComment);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
