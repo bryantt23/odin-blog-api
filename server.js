@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 3000;
 require('dotenv').config();
@@ -9,6 +10,11 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 app.use(express.json());
+app.use(
+  cors({
+    origin: '*'
+  })
+);
 
 const mongoDb = process.env.MONGODB_URI;
 mongoose.connect(mongoDb);
