@@ -1,6 +1,10 @@
+import { useParams } from "react-router-dom";
+
 function Post() {
-    // Logic to fetch and display post
-    return <div>Post will be shown here.</div>;
+    const { id } = useParams()
+    // Use the id to fetch post data
+
+    return <div>Post details for post ID: {id}</div>;
 }
 
 export default Post;
