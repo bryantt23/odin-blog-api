@@ -37,30 +37,31 @@ function Post() {
     }
 
     return (
-        <div>
-            <h2>{post.title}</h2>
-            <p>{post.body}</p>
+        <div className="post-container">
+            <h2 className="post-title">{post.title}</h2>
+            <p className="post-body">{post.body}</p>
             <h3>Comments</h3>
             {post.comments && post.comments.length > 0 ? (
-                <ul>
+                <ul className="comments-list">
                     {post.comments.map(({ body, author }, index) => (
-                        <li key={index}><strong>{author}</strong>: {body}</li>
+                        <li key={index} className="comment-item">
+                            <span className="comment-author">{author}</span>:
+                            <span className="comment-body">{body}</span>
+                        </li>
                     ))}
                 </ul>
             ) : (
                 <p>No comments.</p>
             )}
-            <form onSubmit={handleCommentSubmit}>
+            <form onSubmit={handleCommentSubmit} className="comment-form">
                 <label>
                     Name:
                     <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)} />
                 </label>
-                <br />
                 <label>
                     Comment:
                     <textarea value={comment} onChange={(e) => setComment(e.target.value)} />
                 </label>
-                <br />
                 <button type="submit">Submit Comment</button>
             </form>
         </div>

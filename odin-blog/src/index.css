@@ -1,0 +1,239 @@
+/* styles for header nav */
+.header {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.nav-item a:hover {
+  color: #007bff;
+}
+/* Styles for CreatePost component */
+
+.create-post-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-post-form input[type='text'],
+.create-post-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.create-post-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.create-post-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-post-form button:hover {
+  background-color: #0056b3;
+}
+/* Styles for Login component */
+
+.login-form {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form input[type='text'],
+.login-form input[type='password'] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #218838;
+}
+/* Styles for Post component */
+
+.post-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+}
+
+.post-body {
+  margin-bottom: 30px;
+  color: #666;
+  font-size: 18px;
+}
+
+.comments-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-body {
+  margin-left: 20px;
+}
+
+.comment-form {
+  margin-top: 30px;
+}
+
+.comment-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.comment-form input[type='text'],
+.comment-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.comment-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.comment-form button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comment-form button:hover {
+  background-color: #0056b3;
+}
+/* Styles for Posts component */
+
+.posts-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.posts-title {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333;
+}
+
+.post-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+  margin-top: 0;
+  color: #007bff;
+  font-size: 20px;
+}
+
+.post-body {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.read-more-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more-link:hover {
+  text-decoration: underline;
+}

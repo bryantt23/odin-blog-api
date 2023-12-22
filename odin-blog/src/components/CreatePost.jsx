@@ -26,19 +26,21 @@ function CreatePost() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="create-post-form">
             <input
                 type="text"
                 placeholder="Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
+                className="form-title"
             />
             <textarea
                 placeholder="Body"
                 value={body}
                 onChange={(e) => setBody(e.target.value)}
+                className="form-body"
             />
-            <button type="submit">Create Post</button>
+            <button type="submit" className="submit-button">Create Post</button>
         </form>
     );
 }
