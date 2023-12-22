@@ -4,10 +4,12 @@ import Post from './components/Post';
 import CreatePost from './components/CreatePost';
 import Login from './components/Login';
 import ProtectedRoute from './components/ProtectedRoute';
+import Header from './components/Header';
 
 function App() {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="/posts" element={<Posts />} />
         <Route path="/post/:id" element={<Post />} />
