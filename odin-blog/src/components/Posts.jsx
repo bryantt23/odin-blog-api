@@ -20,7 +20,7 @@ function Posts() {
                         <li key={post._id}>
                             <h3>{post.title}</h3>
                             <p>{post.body}</p>
-                            <Link to={`/post/${post._id}`}>Read more</Link>
+                            <Link to={`/post/${post._id}`} target='_blank'>Read more</Link>
                         </li>
                     ))}
                 </ul>

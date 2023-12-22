@@ -94,6 +94,19 @@ app.post('/posts', authenticateJWT, async (req, res) => {
   }
 });
 
+app.get('/post/:id', async (req, res) => {
+  try {
+    const postId = req.params.id;
+    const post = await Post.findById(postId);
+    if (!post) {
+      return res.status(404).send('Post not found');
+    }
+    res.json(post);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
