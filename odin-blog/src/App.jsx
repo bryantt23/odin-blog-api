@@ -3,6 +3,7 @@ import Posts from './components/Posts';
 import Post from './components/Post';
 import CreatePost from './components/CreatePost';
 import Login from './components/Login';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/posts" element={<Posts />} />
         <Route path="/post/:id" element={<Post />} />
-        <Route path="/create-post" element={<CreatePost />} />
+        <Route path="/create-post" element={<ProtectedRoute><CreatePost /></ProtectedRoute>} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
